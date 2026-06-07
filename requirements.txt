@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+trafilatura
+newspaper3k
+googlenewsdecoder
+lxml
+lxml_html_clean
