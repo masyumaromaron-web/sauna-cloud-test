@@ -1,0 +1,22 @@
+name: 本文取得テスト
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: コードを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 部品をインストール
+        run: pip install -r requirements.txt
+
+      - name: テスト実行
+        run: python test_fetch.py
